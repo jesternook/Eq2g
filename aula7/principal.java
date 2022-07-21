@@ -19,12 +19,12 @@ public class principal {
         delta.setC(entrada.nextDouble());
         delta.calculaDelta();
         System.out.println("  Resultados: ");
-        System.out.println("Valor de Delta: " + delta.getDelta());
+        System.out.println("Delta = " + delta.getDelta());
         if (delta.getDelta() < 0) {
-            System.out.println("A equação não tem raízes reais");
+            System.out.println("A equação não tem raízes reais, delta não pode ser negativo");
         } else {
-            System.out.println("X |: " + x.calculaXn(delta));
-            System.out.println("X ||: " + x.calculaXp(delta));
+            System.out.println("X | = " + x.calculaXn(delta));
+            System.out.println("X || = " + x.calculaXp(delta));
         }
     }
 }
