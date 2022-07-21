@@ -2,7 +2,7 @@ package aula7;
 
 import java.lang.Math;
 
-public class EqX extends Delta{
+public class EqX extends Equacao{
     private double xN;
     private double xP;
 
@@ -22,16 +22,14 @@ public class EqX extends Delta{
     //#endregion
 
     //#region Regras de Negócio 
-    public double calculaXn(){
-        xN = - super.getB() + Math.sqrt(super.getDelta()) / 2 * super.getA();
+    public double calculaXn(Delta delta){
+        xN =  -(delta.getB() + Math.sqrt(delta.getDelta())) / (2 * delta.getA());
         return xN;
     }
 
-    public double calculaXp(){
-        xP = - super.getB() - Math.sqrt(super.getDelta()) / 2 * super.getA();
+    public double calculaXp(Delta delta){
+        xP =  -(delta.getB() - Math.sqrt(delta.getDelta())) / (2 * delta.getA());
         return xP;
     }
-    
-
     //#endregion
 }
